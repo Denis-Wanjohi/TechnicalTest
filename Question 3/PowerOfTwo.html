@@ -14,12 +14,12 @@
     <script>
         function checkNumber(){
             let num = parseInt(document.getElementById('num').value);
-            let x = Math.log2(num);
-            if(Number.isInteger(x)){
-                document.getElementById('value').textContent = 'true'
+            let value = Math.log2(num);
+            if(Number.isInteger(value)){//confirms if value is a whole number
+                document.getElementById('value').textContent = 'true'//returns true
                 console.log(true)
             }else{
-                document.getElementById('value').textContent = 'false'
+                document.getElementById('value').textContent = 'false'//otherwise false
                 
             }
         }

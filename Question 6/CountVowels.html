@@ -1,4 +1,4 @@
-
+<!-- Write a program that counts the number of vowels in a sentence. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +18,8 @@
             let sentence = document.getElementById('sentence').value
             let noOfVowels = 0;
             
-            newArr = [...sentence]
-            vowels = ['a','e','i','o','u','A','E','I','O','U']
+            newArr = [...sentence]//unpacking the sentence to an array
+            vowels = ['a','e','i','o','u','A','E','I','O','U']//array of all vowels
             
             for(i = 0; i< newArr.length; i++){
                 if(vowels.includes(newArr[i])){
@@ -27,7 +27,7 @@
                 }
             }
             document.getElementById('vowels').textContent = 'The number of vowels is :' + noOfVowels
-             console.log(noOfVowels)
+             
         }
         
         
