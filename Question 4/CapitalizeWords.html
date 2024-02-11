@@ -1,0 +1,37 @@
+ <!-- Question 4: Capitalize Words
+ Write a program that accepts a string as input, capitalizes the first letter of each word in the 
+ string, and then returns the result string. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <div style="margin: auto; width: 300px; background-color: rgb(85, 229, 85); height: 200px; text-align: center;" >
+            <h4>Enter a sentence</h4>
+            <input type="text" id="sentence">
+            <button style="padding-left: 2px; padding-right: 2px; padding-top: 3px; padding-bottom: 3px; border-radius: 2-px; " onclick="mySentenc()" type="submit">Submit</button><br>
+            <p id="finalSentence"></p>
+    </div>
+    <script>
+        function mySentenc(){
+            let mySentence = document.getElementById('sentence').value;//takes the string
+            let newSentence = [...mySentence];//convert into an array
+            for(i = 0; i< newSentence.length ; i++){
+                newSentence[0] = newSentence[0].toUpperCase()//changes the first letter to uppercase
+                if(newSentence[i] == ' '){//looks for white space in the string
+                    i++
+                    newSentence[i] =  newSentence[i].toUpperCase();
+                }
+            }
+            document.getElementById('finalSentence').textContent = newSentence.join('')// formart the array to string then return 
+        }
+        
+    </script>
+</body>
+</html>
+
+

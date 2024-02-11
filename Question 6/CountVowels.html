@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="margin: auto; width: 300px; background-color: rgb(85, 229, 85); height: 200px; text-align: center;" >
+            <h4>Enter a sentence</h4>
+            <input type="text" id="sentence">
+            <button style="padding-left: 2px; padding-right: 2px; padding-top: 3px; padding-bottom: 3px; border-radius: 2-px; " onclick="countVowels()" type="submit">Submit</button><br>
+            <p id="vowels"></p>
+    </div>
+    <script>
+        function countVowels(){
+            let sentence = document.getElementById('sentence').value
+            let noOfVowels = 0;
+            
+            newArr = [...sentence]
+            vowels = ['a','e','i','o','u','A','E','I','O','U']
+            
+            for(i = 0; i< newArr.length; i++){
+                if(vowels.includes(newArr[i])){
+                    noOfVowels++
+                }
+            }
+            document.getElementById('vowels').textContent = 'The number of vowels is :' + noOfVowels
+             console.log(noOfVowels)
+        }
+        
+        
+    </script>
+</body>
+</html>
+
+

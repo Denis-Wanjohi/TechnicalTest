@@ -1,0 +1,48 @@
+<!-- 
+    Write a program that takes an integer as input and returns an integer with reversed digit 
+ordering.
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="margin: auto; width: 300px; background-color: rgb(85, 229, 85); height: 200px; text-align: center;" >
+            <h4>Enter a value</h4>
+            <input type="number" id="num">
+            <button style="padding-left: 2px; padding-right: 2px; padding-top: 3px; padding-bottom: 3px; border-radius: 2-px; " onclick="mynum()" type="submit">Submit</button><br>
+            <p id="finalValue"></p>
+    </div>
+    <script>
+        function mynum(){
+            let num = document.getElementById('num').value
+
+            let sign  =  ''
+            let numArr = [...num]
+            for(i = numArr.length ; i>0 ; i--){
+                if(numArr[i] == 0){
+                    if(numArr[numArr.length -1] == 0){
+                    numArr.pop()  
+                    }
+                }
+            }
+            if(numArr[0] == '-' || numArr[0] == '+'){
+                sign = numArr[0]
+                numArr.shift();
+            }
+
+            numArr.reverse();
+            document.getElementById('finalValue').textContent  = sign + numArr.join('')
+            // console.log(sign + numArr.join(''))
+        }
+        
+        
+    </script>
+</body>
+</html>
+
